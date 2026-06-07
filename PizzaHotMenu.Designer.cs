@@ -65,6 +65,7 @@
             this.btnContact.TabIndex = 2;
             this.btnContact.Text = "Contact ";
             this.btnContact.UseVisualStyleBackColor = false;
+            this.btnContact.Click += new System.EventHandler(this.btnContact_Click);
             // 
             // btnOrder
             // 

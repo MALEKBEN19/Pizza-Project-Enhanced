@@ -21,7 +21,7 @@ namespace PizzaProjectEnhanced
             btnContact.Enabled = true;
         }
         OrderMenu MyOrderMenu = null;
-        
+        frmContact MyContact = null;
         private void btnOrder_Click(object sender, EventArgs e)
         {
             
@@ -32,7 +32,11 @@ namespace PizzaProjectEnhanced
                 MyOrderMenu=new OrderMenu();
                 MyOrderMenu.Show();
                 MyOrderMenu.BringToFront();
-                
+                if (MyContact!=null&&!MyContact.IsDisposed)
+                {
+                    MyContact.Close();
+                }
+
             }
             else
             {
@@ -48,13 +52,42 @@ namespace PizzaProjectEnhanced
 
         private void btnMenu_Click(object sender, EventArgs e)
         {
-                btnMenu.Enabled=false;
+             btnMenu.Enabled=false;
             btnOrder.Enabled = true;
-            MyOrderMenu.Close(); 
+            btnContact.Enabled=true;
+            if (MyContact != null && !MyContact.IsDisposed)
+            {
+                MyContact.Close();
+            }
+            if (MyOrderMenu != null && !MyOrderMenu.IsDisposed)
+            {
+                MyOrderMenu.Close();
+            }
+           
            
             
         }
 
+        private void btnContact_Click(object sender, EventArgs e)
+        {
+            if (MyContact == null || MyContact.IsDisposed)
+            {
+                btnContact.Enabled = false;
+                btnMenu.Enabled = true;
+                btnOrder.Enabled = true;
+                MyContact = new frmContact();
+                MyContact.Show();
+                MyContact.BringToFront();
+                if (MyOrderMenu != null&&!MyOrderMenu.IsDisposed)
+                {
+                    MyOrderMenu.Close();
+                }
 
+            }
+            else
+            {
+                MyContact.BringToFront();
+            }
+        }
     }
 }
