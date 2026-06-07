@@ -29,6 +29,7 @@ namespace PizzaProjectEnhanced
             {
                 btnMenu.Enabled = true;
                 btnOrder.Enabled = false;
+                btnContact.Enabled = true;
                 MyOrderMenu=new OrderMenu();
                 MyOrderMenu.Show();
                 MyOrderMenu.BringToFront();
