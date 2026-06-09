@@ -35,6 +35,7 @@
             this.btnMenu = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.PlLogoMenu = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -44,6 +45,7 @@
             this.panel1.Controls.Add(this.btnContact);
             this.panel1.Controls.Add(this.btnOrder);
             this.panel1.Controls.Add(this.btnMenu);
+            this.panel1.Controls.Add(this.panel3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -52,8 +54,7 @@
             // 
             // btnContact
             // 
-            this.btnContact.BackColor = System.Drawing.Color.Transparent;
-            this.btnContact.FlatAppearance.BorderSize = 0;
+            this.btnContact.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnContact.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnContact.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.btnContact.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -61,7 +62,7 @@
             this.btnContact.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnContact.Location = new System.Drawing.Point(-3, 325);
             this.btnContact.Name = "btnContact";
-            this.btnContact.Size = new System.Drawing.Size(190, 85);
+            this.btnContact.Size = new System.Drawing.Size(193, 85);
             this.btnContact.TabIndex = 2;
             this.btnContact.Text = "Contact ";
             this.btnContact.UseVisualStyleBackColor = false;
@@ -69,16 +70,16 @@
             // 
             // btnOrder
             // 
-            this.btnOrder.BackColor = System.Drawing.Color.Transparent;
-            this.btnOrder.FlatAppearance.BorderSize = 0;
+            this.btnOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnOrder.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnOrder.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnOrder.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.btnOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOrder.Font = new System.Drawing.Font("MV Boli", 27.75F, System.Drawing.FontStyle.Bold);
             this.btnOrder.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnOrder.Location = new System.Drawing.Point(3, 196);
+            this.btnOrder.Location = new System.Drawing.Point(-3, 196);
             this.btnOrder.Name = "btnOrder";
-            this.btnOrder.Size = new System.Drawing.Size(184, 85);
+            this.btnOrder.Size = new System.Drawing.Size(193, 85);
             this.btnOrder.TabIndex = 1;
             this.btnOrder.Text = "Order";
             this.btnOrder.UseVisualStyleBackColor = false;
@@ -86,8 +87,8 @@
             // 
             // btnMenu
             // 
-            this.btnMenu.BackColor = System.Drawing.Color.Transparent;
-            this.btnMenu.FlatAppearance.BorderSize = 0;
+            this.btnMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnMenu.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnMenu.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnMenu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.btnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -95,7 +96,7 @@
             this.btnMenu.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnMenu.Location = new System.Drawing.Point(0, 67);
             this.btnMenu.Name = "btnMenu";
-            this.btnMenu.Size = new System.Drawing.Size(190, 85);
+            this.btnMenu.Size = new System.Drawing.Size(193, 85);
             this.btnMenu.TabIndex = 0;
             this.btnMenu.Text = "Menu";
             this.btnMenu.UseVisualStyleBackColor = false;
@@ -104,7 +105,7 @@
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.Black;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("MV Boli", 48F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label1.Location = new System.Drawing.Point(347, 9);
             this.label1.Name = "label1";
@@ -123,15 +124,23 @@
             this.PlLogoMenu.Size = new System.Drawing.Size(315, 289);
             this.PlLogoMenu.TabIndex = 1;
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Red;
+            this.panel3.Location = new System.Drawing.Point(59, -3);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(66, 507);
+            this.panel3.TabIndex = 4;
+            // 
             // PizzaHotMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(894, 497);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.PlLogoMenu);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(910, 536);
             this.MinimumSize = new System.Drawing.Size(910, 536);
@@ -151,6 +160,7 @@
         private System.Windows.Forms.Button btnMenu;
         private System.Windows.Forms.Button btnContact;
         private System.Windows.Forms.Button btnOrder;
+        private System.Windows.Forms.Panel panel3;
     }
 }
 
