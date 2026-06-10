@@ -33,9 +33,9 @@
             this.btnContact = new System.Windows.Forms.Button();
             this.btnOrder = new System.Windows.Forms.Button();
             this.btnMenu = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.PlLogoMenu = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -102,10 +102,18 @@
             this.btnMenu.UseVisualStyleBackColor = false;
             this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Red;
+            this.panel3.Location = new System.Drawing.Point(59, -3);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(66, 507);
+            this.panel3.TabIndex = 4;
+            // 
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.Black;
-            this.label1.Font = new System.Drawing.Font("MV Boli", 48F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Tomatos Pizza", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label1.Location = new System.Drawing.Point(347, 9);
             this.label1.Name = "label1";
@@ -123,14 +131,6 @@
             this.PlLogoMenu.Name = "PlLogoMenu";
             this.PlLogoMenu.Size = new System.Drawing.Size(315, 289);
             this.PlLogoMenu.TabIndex = 1;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.Red;
-            this.panel3.Location = new System.Drawing.Point(59, -3);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(66, 507);
-            this.panel3.TabIndex = 4;
             // 
             // PizzaHotMenu
             // 
