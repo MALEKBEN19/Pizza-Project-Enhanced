@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrderMenu));
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -40,9 +41,12 @@
             this.rbThickCrust = new System.Windows.Forms.RadioButton();
             this.rbThinCrust = new System.Windows.Forms.RadioButton();
             this.label3 = new System.Windows.Forms.Label();
+            this.pbPizzaPic = new System.Windows.Forms.PictureBox();
+            this.imgPicPizza = new System.Windows.Forms.ImageList(this.components);
             this.panel1.SuspendLayout();
             this.plSize.SuspendLayout();
             this.lpCrustType.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPizzaPic)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -57,6 +61,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.pbPizzaPic);
             this.panel1.Controls.Add(this.lpCrustType);
             this.panel1.Controls.Add(this.plSize);
             this.panel1.Location = new System.Drawing.Point(12, 105);
@@ -72,7 +77,7 @@
             this.plSize.Controls.Add(this.label2);
             this.plSize.Location = new System.Drawing.Point(20, 15);
             this.plSize.Name = "plSize";
-            this.plSize.Size = new System.Drawing.Size(176, 195);
+            this.plSize.Size = new System.Drawing.Size(180, 195);
             this.plSize.TabIndex = 3;
             // 
             // label2
@@ -165,6 +170,20 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Crust Type?";
             // 
+            // pbPizzaPic
+            // 
+            this.pbPizzaPic.Location = new System.Drawing.Point(336, 15);
+            this.pbPizzaPic.Name = "pbPizzaPic";
+            this.pbPizzaPic.Size = new System.Drawing.Size(221, 167);
+            this.pbPizzaPic.TabIndex = 12;
+            this.pbPizzaPic.TabStop = false;
+            // 
+            // imgPicPizza
+            // 
+            this.imgPicPizza.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imgPicPizza.ImageStream")));
+            this.imgPicPizza.TransparentColor = System.Drawing.Color.Transparent;
+            this.imgPicPizza.Images.SetKeyName(0, "SmallPizza.png");
+            // 
             // OrderMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -184,6 +203,7 @@
             this.plSize.PerformLayout();
             this.lpCrustType.ResumeLayout(false);
             this.lpCrustType.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPizzaPic)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -202,5 +222,7 @@
         private System.Windows.Forms.RadioButton rbThickCrust;
         private System.Windows.Forms.RadioButton rbThinCrust;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox pbPizzaPic;
+        private System.Windows.Forms.ImageList imgPicPizza;
     }
 }
