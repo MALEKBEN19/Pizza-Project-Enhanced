@@ -155,6 +155,7 @@
             this.Name = "PizzaHotMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pizza Hot";
+
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
