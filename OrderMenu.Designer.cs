@@ -55,6 +55,7 @@
             this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.checkBox4 = new System.Windows.Forms.CheckBox();
             this.checkBox5 = new System.Windows.Forms.CheckBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.plCrustType.SuspendLayout();
             this.plWhereToEat.SuspendLayout();
@@ -75,6 +76,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.plCrustType);
             this.panel1.Controls.Add(this.plWhereToEat);
             this.panel1.Controls.Add(this.pbPizzaPic);
@@ -175,7 +177,7 @@
             // 
             // pbPizzaPic
             // 
-            this.pbPizzaPic.Location = new System.Drawing.Point(412, 15);
+            this.pbPizzaPic.Location = new System.Drawing.Point(401, 15);
             this.pbPizzaPic.Name = "pbPizzaPic";
             this.pbPizzaPic.Size = new System.Drawing.Size(221, 209);
             this.pbPizzaPic.TabIndex = 12;
@@ -192,7 +194,7 @@
             this.plToppings.Controls.Add(this.label3);
             this.plToppings.Location = new System.Drawing.Point(20, 230);
             this.plToppings.Name = "plToppings";
-            this.plToppings.Size = new System.Drawing.Size(613, 120);
+            this.plToppings.Size = new System.Drawing.Size(602, 120);
             this.plToppings.TabIndex = 10;
             // 
             // label3
@@ -334,6 +336,13 @@
             this.checkBox5.Text = "Onions";
             this.checkBox5.UseVisualStyleBackColor = true;
             // 
+            // panel2
+            // 
+            this.panel2.Location = new System.Drawing.Point(640, 16);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(211, 334);
+            this.panel2.TabIndex = 13;
+            // 
             // OrderMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -391,5 +400,6 @@
         private System.Windows.Forms.CheckBox checkBox5;
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Panel panel2;
     }
 }
