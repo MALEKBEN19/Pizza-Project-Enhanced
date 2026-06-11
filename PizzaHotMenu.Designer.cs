@@ -48,6 +48,7 @@
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(190, 497);
             this.panel1.TabIndex = 0;
@@ -60,9 +61,10 @@
             this.btnContact.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnContact.Font = new System.Drawing.Font("MV Boli", 27.75F, System.Drawing.FontStyle.Bold);
             this.btnContact.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnContact.Location = new System.Drawing.Point(-3, 325);
+            this.btnContact.Location = new System.Drawing.Point(-2, 325);
+            this.btnContact.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnContact.Name = "btnContact";
-            this.btnContact.Size = new System.Drawing.Size(193, 85);
+            this.btnContact.Size = new System.Drawing.Size(193, 84);
             this.btnContact.TabIndex = 2;
             this.btnContact.Text = "Contact ";
             this.btnContact.UseVisualStyleBackColor = false;
@@ -77,9 +79,10 @@
             this.btnOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOrder.Font = new System.Drawing.Font("MV Boli", 27.75F, System.Drawing.FontStyle.Bold);
             this.btnOrder.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnOrder.Location = new System.Drawing.Point(-3, 196);
+            this.btnOrder.Location = new System.Drawing.Point(-2, 196);
+            this.btnOrder.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnOrder.Name = "btnOrder";
-            this.btnOrder.Size = new System.Drawing.Size(193, 85);
+            this.btnOrder.Size = new System.Drawing.Size(193, 84);
             this.btnOrder.TabIndex = 1;
             this.btnOrder.Text = "Order";
             this.btnOrder.UseVisualStyleBackColor = false;
@@ -94,9 +97,10 @@
             this.btnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMenu.Font = new System.Drawing.Font("MV Boli", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMenu.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnMenu.Location = new System.Drawing.Point(0, 67);
+            this.btnMenu.Location = new System.Drawing.Point(0, 68);
+            this.btnMenu.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnMenu.Name = "btnMenu";
-            this.btnMenu.Size = new System.Drawing.Size(193, 85);
+            this.btnMenu.Size = new System.Drawing.Size(193, 84);
             this.btnMenu.TabIndex = 0;
             this.btnMenu.Text = "Menu";
             this.btnMenu.UseVisualStyleBackColor = false;
@@ -106,6 +110,7 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.Red;
             this.panel3.Location = new System.Drawing.Point(59, -3);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(66, 507);
             this.panel3.TabIndex = 4;
@@ -116,6 +121,7 @@
             this.label1.Font = new System.Drawing.Font("Tomatos Pizza", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label1.Location = new System.Drawing.Point(347, 9);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(421, 79);
             this.label1.TabIndex = 2;
@@ -128,8 +134,9 @@
             this.PlLogoMenu.BackgroundImage = global::PizzaProjectEnhanced.Properties.Resources.Pizza;
             this.PlLogoMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.PlLogoMenu.Location = new System.Drawing.Point(404, 110);
+            this.PlLogoMenu.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.PlLogoMenu.Name = "PlLogoMenu";
-            this.PlLogoMenu.Size = new System.Drawing.Size(315, 289);
+            this.PlLogoMenu.Size = new System.Drawing.Size(314, 289);
             this.PlLogoMenu.TabIndex = 1;
             // 
             // PizzaHotMenu
@@ -142,6 +149,7 @@
             this.Controls.Add(this.PlLogoMenu);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.MaximumSize = new System.Drawing.Size(910, 536);
             this.MinimumSize = new System.Drawing.Size(910, 536);
             this.Name = "PizzaHotMenu";

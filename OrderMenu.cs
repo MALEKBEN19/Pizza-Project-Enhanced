@@ -16,5 +16,10 @@ namespace PizzaProjectEnhanced
         {
             InitializeComponent();
         }
+
+        private void OrderMenu_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
