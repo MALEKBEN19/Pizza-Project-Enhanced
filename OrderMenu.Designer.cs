@@ -245,6 +245,7 @@
             this.radioButton3.Size = new System.Drawing.Size(137, 24);
             this.radioButton3.TabIndex = 8;
             this.radioButton3.TabStop = true;
+            this.radioButton3.Tag = "5";
             this.radioButton3.Text = "Thick Crust";
             this.radioButton3.UseVisualStyleBackColor = true;
             // 
@@ -257,6 +258,7 @@
             this.radioButton4.Size = new System.Drawing.Size(127, 24);
             this.radioButton4.TabIndex = 7;
             this.radioButton4.TabStop = true;
+            this.radioButton4.Tag = "0";
             this.radioButton4.Text = "Thin Crust";
             this.radioButton4.UseVisualStyleBackColor = true;
             // 
@@ -346,6 +348,7 @@
             this.chkGreenPappers.Name = "chkGreenPappers";
             this.chkGreenPappers.Size = new System.Drawing.Size(185, 27);
             this.chkGreenPappers.TabIndex = 15;
+            this.chkGreenPappers.Tag = "5";
             this.chkGreenPappers.Text = "Green Pappers";
             this.chkGreenPappers.UseVisualStyleBackColor = true;
             // 
@@ -357,6 +360,7 @@
             this.chkOlives.Name = "chkOlives";
             this.chkOlives.Size = new System.Drawing.Size(101, 27);
             this.chkOlives.TabIndex = 14;
+            this.chkOlives.Tag = "5";
             this.chkOlives.Text = "Olives";
             this.chkOlives.UseVisualStyleBackColor = true;
             // 
@@ -368,6 +372,7 @@
             this.chkOnions.Name = "chkOnions";
             this.chkOnions.Size = new System.Drawing.Size(101, 27);
             this.chkOnions.TabIndex = 13;
+            this.chkOnions.Tag = "5";
             this.chkOnions.Text = "Onions";
             this.chkOnions.UseVisualStyleBackColor = true;
             // 
@@ -379,6 +384,7 @@
             this.chkTomatoes.Name = "chkTomatoes";
             this.chkTomatoes.Size = new System.Drawing.Size(125, 27);
             this.chkTomatoes.TabIndex = 9;
+            this.chkTomatoes.Tag = "5";
             this.chkTomatoes.Text = "Tomatoes";
             this.chkTomatoes.UseVisualStyleBackColor = true;
             // 
@@ -390,6 +396,7 @@
             this.chkMashrooms.Name = "chkMashrooms";
             this.chkMashrooms.Size = new System.Drawing.Size(137, 27);
             this.chkMashrooms.TabIndex = 8;
+            this.chkMashrooms.Tag = "5";
             this.chkMashrooms.Text = "Mushrooms";
             this.chkMashrooms.UseVisualStyleBackColor = true;
             // 
@@ -401,6 +408,7 @@
             this.chkChees.Name = "chkChees";
             this.chkChees.Size = new System.Drawing.Size(89, 27);
             this.chkChees.TabIndex = 7;
+            this.chkChees.Tag = "5";
             this.chkChees.Text = "Chees";
             this.chkChees.UseVisualStyleBackColor = true;
             // 
@@ -434,6 +442,7 @@
             this.rbLarge.Size = new System.Drawing.Size(95, 29);
             this.rbLarge.TabIndex = 9;
             this.rbLarge.TabStop = true;
+            this.rbLarge.Tag = "40";
             this.rbLarge.Text = "Large";
             this.rbLarge.UseVisualStyleBackColor = true;
             // 
@@ -446,6 +455,7 @@
             this.rbMedium.Size = new System.Drawing.Size(108, 29);
             this.rbMedium.TabIndex = 8;
             this.rbMedium.TabStop = true;
+            this.rbMedium.Tag = "30";
             this.rbMedium.Text = "Medium";
             this.rbMedium.UseVisualStyleBackColor = true;
             // 
@@ -458,6 +468,7 @@
             this.rbSmall.Size = new System.Drawing.Size(95, 29);
             this.rbSmall.TabIndex = 7;
             this.rbSmall.TabStop = true;
+            this.rbSmall.Tag = "20";
             this.rbSmall.Text = "Small";
             this.rbSmall.UseVisualStyleBackColor = true;
             // 
@@ -491,7 +502,6 @@
             this.Name = "OrderMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OrderMenu";
-            
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
