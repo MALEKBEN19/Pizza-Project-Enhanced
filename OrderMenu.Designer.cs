@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrderMenu));
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -52,7 +51,6 @@
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.label4 = new System.Windows.Forms.Label();
-            this.pbPizzaPic = new System.Windows.Forms.PictureBox();
             this.plToppings = new System.Windows.Forms.Panel();
             this.chkGreenPappers = new System.Windows.Forms.CheckBox();
             this.chkOlives = new System.Windows.Forms.CheckBox();
@@ -66,14 +64,14 @@
             this.rbMedium = new System.Windows.Forms.RadioButton();
             this.rbSmall = new System.Windows.Forms.RadioButton();
             this.label2 = new System.Windows.Forms.Label();
-            this.imgPicPizza = new System.Windows.Forms.ImageList(this.components);
+            this.pbPizzaPic = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.plCrustType.SuspendLayout();
             this.plWhereToEat.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbPizzaPic)).BeginInit();
             this.plToppings.SuspendLayout();
             this.plSize.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPizzaPic)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -318,16 +316,6 @@
             this.label4.TabIndex = 5;
             this.label4.Text = "Where To Eat?";
             // 
-            // pbPizzaPic
-            // 
-            this.pbPizzaPic.BackgroundImage = global::PizzaProjectEnhanced.Properties.Resources.SmallPizza;
-            this.pbPizzaPic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbPizzaPic.Location = new System.Drawing.Point(401, 15);
-            this.pbPizzaPic.Name = "pbPizzaPic";
-            this.pbPizzaPic.Size = new System.Drawing.Size(221, 209);
-            this.pbPizzaPic.TabIndex = 12;
-            this.pbPizzaPic.TabStop = false;
-            // 
             // plToppings
             // 
             this.plToppings.Controls.Add(this.chkGreenPappers);
@@ -447,6 +435,7 @@
             this.rbLarge.Tag = "40";
             this.rbLarge.Text = "Large";
             this.rbLarge.UseVisualStyleBackColor = true;
+            this.rbLarge.CheckedChanged += new System.EventHandler(this.rbLarge_CheckedChanged);
             // 
             // rbMedium
             // 
@@ -460,6 +449,7 @@
             this.rbMedium.Tag = "30";
             this.rbMedium.Text = "Medium";
             this.rbMedium.UseVisualStyleBackColor = true;
+            this.rbMedium.CheckedChanged += new System.EventHandler(this.rbMedium_CheckedChanged);
             // 
             // rbSmall
             // 
@@ -485,11 +475,15 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "Size?";
             // 
-            // imgPicPizza
+            // pbPizzaPic
             // 
-            this.imgPicPizza.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imgPicPizza.ImageStream")));
-            this.imgPicPizza.TransparentColor = System.Drawing.Color.Transparent;
-            this.imgPicPizza.Images.SetKeyName(0, "SmallPizza.png");
+            this.pbPizzaPic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbPizzaPic.Location = new System.Drawing.Point(401, 15);
+            this.pbPizzaPic.Name = "pbPizzaPic";
+            this.pbPizzaPic.Size = new System.Drawing.Size(221, 209);
+            this.pbPizzaPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbPizzaPic.TabIndex = 12;
+            this.pbPizzaPic.TabStop = false;
             // 
             // OrderMenu
             // 
@@ -512,11 +506,11 @@
             this.plCrustType.PerformLayout();
             this.plWhereToEat.ResumeLayout(false);
             this.plWhereToEat.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbPizzaPic)).EndInit();
             this.plToppings.ResumeLayout(false);
             this.plToppings.PerformLayout();
             this.plSize.ResumeLayout(false);
             this.plSize.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPizzaPic)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -534,7 +528,6 @@
         private System.Windows.Forms.Panel plToppings;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pbPizzaPic;
-        private System.Windows.Forms.ImageList imgPicPizza;
         private System.Windows.Forms.Panel plWhereToEat;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;

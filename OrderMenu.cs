@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PizzaProjectEnhanced.Properties;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,19 +18,40 @@ namespace PizzaProjectEnhanced
             InitializeComponent();
         }
         double TotalPricing = 0;
+
+
+        void ChoosePicSize(byte Num)
+        {
+            if (Num == 1)
+            {
+
+                pbPizzaPic.Image = Resources.PizzaMedium;
+                
+            }
+            if (Num == 2)
+            {
+                pbPizzaPic.Image = Resources.SmallPizza;
+            }
+            if (Num == 3) {
+                pbPizzaPic.Image = Resources.LargePizza;
+            }
+        }
         private double PizzaSizePrice()
         {
             if (rbSmall.Checked)
             {
                 lblSize.Text = "Small";
+                ChoosePicSize(1);
                 return Convert.ToDouble(rbSmall.Tag) ;
             }else if(rbMedium.Checked)
             {
                 lblSize.Text = "Medium";
+                ChoosePicSize(2);
                 return Convert.ToDouble(rbMedium.Tag);
             }
             else
             {
+                ChoosePicSize(3);
                 lblSize.Text = "Large";
                 return Convert.ToDouble(rbLarge.Tag);
             }
@@ -91,7 +113,17 @@ namespace PizzaProjectEnhanced
 
         private void rbSmall_CheckedChanged(object sender, EventArgs e)
         {
+            LogicOfMenu();
+        }
 
+        private void rbMedium_CheckedChanged(object sender, EventArgs e)
+        {
+            LogicOfMenu();
+        }
+
+        private void rbLarge_CheckedChanged(object sender, EventArgs e)
+        {
+            LogicOfMenu();
         }
     }
 }

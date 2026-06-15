@@ -83,6 +83,16 @@ namespace PizzaProjectEnhanced.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap LargePizza {
+            get {
+                object obj = ResourceManager.GetObject("LargePizza", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap MyPicture {
             get {
                 object obj = ResourceManager.GetObject("MyPicture", resourceCulture);
@@ -96,6 +106,16 @@ namespace PizzaProjectEnhanced.Properties {
         internal static System.Drawing.Bitmap Pizza {
             get {
                 object obj = ResourceManager.GetObject("Pizza", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PizzaMedium {
+            get {
+                object obj = ResourceManager.GetObject("PizzaMedium", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
