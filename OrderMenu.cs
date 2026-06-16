@@ -57,7 +57,6 @@ namespace PizzaProjectEnhanced
             }
 
         }
-
         private double CrustTypePricing() {
             if (rbThickCrust.Checked)
             {
@@ -69,7 +68,6 @@ namespace PizzaProjectEnhanced
                 return Convert.ToDouble(rbThinCrust.Tag);
             }
         }
-
         private double ToppingsPricing()
         {
             double MyToppings = 0;
@@ -105,11 +103,89 @@ namespace PizzaProjectEnhanced
         }
 
 
-        void LogicOfMenu()
+        void UpdateSize()
         {
             CalculateTotalPrice();
+            lblPrice.Text = "$ "+TotalPricing.ToString();
         }
 
+
+
+        void UpdateWhereToEat()
+        {
+            if (rbEatIn.Checked)
+            {
+                lblWhereToEat.Text = "Eat In";
+            }
+            else
+            {
+                lblWhereToEat.Text = "Eat Out";
+            }
+        }
+
+        void UpdateCrustType()
+        {
+            CalculateTotalPrice();
+            if (rbThinCrust.Checked)
+            {
+                LblCrustType.Text = "Thin Crust";
+            }
+            else
+            {
+                LblCrustType.Text = "Thick Crust";
+            }
+        }
+
+        void UpdateToppings()
+        {
+            string MyText = "";
+            
+            if (chkChees.Checked)
+            {
+                MyText += "Chees , ";
+            }
+            if (chkTomatoes.Checked)
+            {
+                MyText += "Tomatoes ,";
+            }
+            if (chkOnions.Checked)
+            {
+                MyText += "Onions , ";
+            }
+            if (chkMashrooms.Checked)
+            {
+                MyText += "Mashrooms , ";
+            }
+            if (chkOlives.Checked)
+            {
+                MyText += "Olives , ";
+            }
+            if (chkGreenPappers.Checked)
+            {
+                MyText += "GreenPappers ,";
+            }
+            MyText=MyText.Trim(' ',',');
+           
+            if (MyText.Length < 0)
+            {
+                lblToppings.Text = "Nothing";
+            }
+            else
+            {
+                lblToppings.Text = MyText;
+            }
+            CalculateTotalPrice();
+
+        }
+
+                void LogicOfMenu()
+                {
+                    UpdateSize();
+                    UpdateWhereToEat();
+                    UpdateCrustType();
+                    UpdateToppings();
+
+                }
 
         private void rbSmall_CheckedChanged(object sender, EventArgs e)
         {
@@ -124,6 +200,72 @@ namespace PizzaProjectEnhanced
         private void rbLarge_CheckedChanged(object sender, EventArgs e)
         {
             LogicOfMenu();
+        }
+
+        private void rbEatIn_CheckedChanged(object sender, EventArgs e)
+        {
+            LogicOfMenu();
+        }
+
+        private void rbEatOut_CheckedChanged(object sender, EventArgs e)
+        {
+            LogicOfMenu();
+        }
+            
+        private void rbThinCrust_CheckedChanged(object sender, EventArgs e)
+        {
+            LogicOfMenu();
+        }
+
+        private void rbThickCrust_CheckedChanged(object sender, EventArgs e)
+        {
+            LogicOfMenu();
+        }
+
+        private void chkChees_CheckedChanged(object sender, EventArgs e)
+        {
+            LogicOfMenu();
+        }
+
+        private void chkMashrooms_CheckedChanged(object sender, EventArgs e)
+        {
+            LogicOfMenu();
+        }
+
+        private void chkTomatoes_CheckedChanged(object sender, EventArgs e)
+        {
+            LogicOfMenu();
+        }
+
+        private void chkOnions_CheckedChanged(object sender, EventArgs e)
+        {
+            LogicOfMenu();
+        }
+
+        private void chkOlives_CheckedChanged(object sender, EventArgs e)
+        {
+            LogicOfMenu();
+        }
+
+        private void chkGreenPappers_CheckedChanged(object sender, EventArgs e)
+        {
+            LogicOfMenu();
+        }
+
+
+        void StartTheMenu()
+        {
+            CalculateTotalPrice();
+            rbEatIn.Checked = true;
+            rbSmall.Checked = true;
+            rbThinCrust.Checked = true;
+            
+        }
+
+
+        private void OrderMenu_Load(object sender, EventArgs e)
+        {
+            StartTheMenu();
         }
     }
 }
