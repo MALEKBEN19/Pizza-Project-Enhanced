@@ -267,5 +267,19 @@ namespace PizzaProjectEnhanced
         {
             StartTheMenu();
         }
+
+        private void btnOrder_Click(object sender, EventArgs e)
+        {
+            DialogResult MyDialog = MessageBox.Show("Do You Want To Confirm This Order?","Confirmation",MessageBoxButtons.OKCancel,MessageBoxIcon.Question,MessageBoxDefaultButton.Button2);
+            if(MyDialog == DialogResult.OK)
+            {
+                MessageBox.Show("Enjoy It :-)","(-_-)");
+                
+            }
+            else
+            {
+                MessageBox.Show("Did you Make A Mistake?", "",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+            }
+        }
     }
 }
