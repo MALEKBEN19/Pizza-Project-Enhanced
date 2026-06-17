@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,39 +20,30 @@ namespace PizzaProjectEnhanced
         }
         double TotalPricing = 0;
 
-
-        void ChoosePicSize(byte Num)
+        void SetImagePizza(string MyPath)
         {
-            if (Num == 1)
-            {
-
-                pbPizzaPic.Image = Resources.PizzaMedium;
-                
-            }
-            if (Num == 2)
-            {
-                pbPizzaPic.Image = Resources.SmallPizza;
-            }
-            if (Num == 3) {
-                pbPizzaPic.Image = Resources.LargePizza;
-            }
+            var MyPic=Image.FromFile(MyPath);
+            pbPizzaPic.Image?.Dispose();
+            pbPizzaPic.Image = MyPic;
         }
+ 
         private double PizzaSizePrice()
         {
             if (rbSmall.Checked)
             {
                 lblSize.Text = "Small";
-                ChoosePicSize(1);
+                SetImagePizza(@"D:\ProgrammingAdvicesPath\Icons&Backgrounds\SmallPizza.png");
                 return Convert.ToDouble(rbSmall.Tag) ;
-            }else if(rbMedium.Checked)
+            }
+            if(rbMedium.Checked)
             {
                 lblSize.Text = "Medium";
-                ChoosePicSize(2);
+                SetImagePizza(@"D:\ProgrammingAdvicesPath\Icons&Backgrounds\PizzaMedium.png");
                 return Convert.ToDouble(rbMedium.Tag);
             }
             else
             {
-                ChoosePicSize(3);
+                SetImagePizza(@"D:\ProgrammingAdvicesPath\Icons&Backgrounds\LargePizza.png");
                 lblSize.Text = "Large";
                 return Convert.ToDouble(rbLarge.Tag);
             }
@@ -142,7 +134,7 @@ namespace PizzaProjectEnhanced
             
             if (chkChees.Checked)
             {
-                MyText += "Chees , ";
+                MyText += "Chees ,";
             }
             if (chkTomatoes.Checked)
             {
@@ -150,15 +142,15 @@ namespace PizzaProjectEnhanced
             }
             if (chkOnions.Checked)
             {
-                MyText += "Onions , ";
+                MyText += "Onions ,";
             }
             if (chkMashrooms.Checked)
             {
-                MyText += "Mashrooms , ";
+                MyText += "Mashrooms ,";
             }
             if (chkOlives.Checked)
             {
-                MyText += "Olives , ";
+                MyText += "Olives ,";
             }
             if (chkGreenPappers.Checked)
             {
@@ -166,7 +158,7 @@ namespace PizzaProjectEnhanced
             }
             MyText=MyText.Trim(' ',',');
            
-            if (MyText.Length < 0)
+            if (MyText.Length == 0)
             {
                 lblToppings.Text = "Nothing";
             }
@@ -255,11 +247,17 @@ namespace PizzaProjectEnhanced
 
         void StartTheMenu()
         {
-            CalculateTotalPrice();
+           
             rbEatIn.Checked = true;
             rbSmall.Checked = true;
             rbThinCrust.Checked = true;
-            
+            chkChees.Checked = false;
+            chkMashrooms.Checked = false;
+            chkTomatoes.Checked = false;
+            chkOnions.Checked = false;
+            chkOlives.Checked = false;
+            chkGreenPappers.Checked = false;
+           
         }
 
 
@@ -267,19 +265,33 @@ namespace PizzaProjectEnhanced
         {
             StartTheMenu();
         }
-
+        void LockedBtn(bool LockedMyButtons=true)
+        {
+            bool Locked=!LockedMyButtons;
+            btnOrder.Enabled = Locked;
+            plSize.Enabled = Locked;
+            plToppings.Enabled = Locked;
+            plWhereToEat.Enabled = Locked;
+            plCrustType.Enabled = Locked;
+        }
         private void btnOrder_Click(object sender, EventArgs e)
         {
             DialogResult MyDialog = MessageBox.Show("Do You Want To Confirm This Order?","Confirmation",MessageBoxButtons.OKCancel,MessageBoxIcon.Question,MessageBoxDefaultButton.Button2);
             if(MyDialog == DialogResult.OK)
             {
                 MessageBox.Show("Enjoy It :-)","(-_-)");
-                
+                LockedBtn();
             }
             else
             {
                 MessageBox.Show("Did you Make A Mistake?", "",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
             }
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            LockedBtn(false);
+            StartTheMenu();
         }
     }
 }

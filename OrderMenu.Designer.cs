@@ -66,6 +66,7 @@
             this.rbSmall = new System.Windows.Forms.RadioButton();
             this.label2 = new System.Windows.Forms.Label();
             this.btnOrder = new System.Windows.Forms.Button();
+            this.btnReset = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.plCrustType.SuspendLayout();
@@ -140,7 +141,7 @@
             // 
             this.LblCrustType.AutoSize = true;
             this.LblCrustType.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblCrustType.Location = new System.Drawing.Point(119, 163);
+            this.LblCrustType.Location = new System.Drawing.Point(119, 178);
             this.LblCrustType.Name = "LblCrustType";
             this.LblCrustType.Size = new System.Drawing.Size(76, 16);
             this.LblCrustType.TabIndex = 11;
@@ -148,10 +149,10 @@
             // 
             // lblToppings
             // 
-            this.lblToppings.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblToppings.Location = new System.Drawing.Point(21, 107);
+            this.lblToppings.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblToppings.Location = new System.Drawing.Point(21, 117);
             this.lblToppings.Name = "lblToppings";
-            this.lblToppings.Size = new System.Drawing.Size(187, 49);
+            this.lblToppings.Size = new System.Drawing.Size(187, 58);
             this.lblToppings.TabIndex = 10;
             this.lblToppings.Text = "Nothing";
             // 
@@ -189,7 +190,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(18, 160);
+            this.label9.Location = new System.Drawing.Point(18, 175);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(110, 20);
             this.label9.TabIndex = 6;
@@ -510,12 +511,27 @@
             this.btnOrder.UseVisualStyleBackColor = false;
             this.btnOrder.Click += new System.EventHandler(this.btnOrder_Click);
             // 
+            // btnReset
+            // 
+            this.btnReset.BackColor = System.Drawing.Color.Black;
+            this.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReset.ForeColor = System.Drawing.Color.White;
+            this.btnReset.Location = new System.Drawing.Point(546, 447);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(164, 40);
+            this.btnReset.TabIndex = 3;
+            this.btnReset.Text = "Reset";
+            this.btnReset.UseVisualStyleBackColor = false;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            // 
             // OrderMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Yellow;
             this.ClientSize = new System.Drawing.Size(892, 499);
+            this.Controls.Add(this.btnReset);
             this.Controls.Add(this.btnOrder);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
@@ -582,5 +598,6 @@
         private System.Windows.Forms.Label lblWhereToEat;
         private System.Windows.Forms.Label LblCrustType;
         private System.Windows.Forms.Button btnOrder;
+        private System.Windows.Forms.Button btnReset;
     }
 }
